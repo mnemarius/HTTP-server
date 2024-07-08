@@ -4,9 +4,9 @@ import java.net.InetSocketAddress;
 
 public class Server {
     
-    // Main Method
-    public Server() throws IOException {
-        // Create an HttpServer instance
+
+    public void startServer() throws IOException {
+        // Create an HttpServer instance. Port Transport layer will send to.
         HttpServer server = HttpServer.create(new InetSocketAddress(8008), 0);
 
         // Create a context for a specific path and set the handler
@@ -18,5 +18,4 @@ public class Server {
 
         System.out.println("Server is running on port 8008. Now in separate classes!");
     }
-
 }
